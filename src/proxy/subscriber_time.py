@@ -5,7 +5,7 @@ context = zmq.Context()
 sub = context.socket(zmq.SUB)
 # Assinar "hora" faz este subscriber receber somente as mensagens de P1.
 sub.setsockopt_string(zmq.SUBSCRIBE, "hora")
-sub.connect("tcp://proxy:5556")
+sub.connect("tcp://localhost:5556")
 
 while True:
     message = sub.recv_string()

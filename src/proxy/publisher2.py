@@ -6,7 +6,7 @@ import zmq
 
 context = zmq.Context()
 pub = context.socket(zmq.PUB)
-pub.connect("tcp://proxy:5555")
+pub.connect("tcp://localhost:5555")
 
 while True:
     # O tópico "numero" separa os números das mensagens de horário.
